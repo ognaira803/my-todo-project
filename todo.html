@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://unicons.iconscout.com/release/v4.0.0/css/line.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.3.0/font/bootstrap-icons.css">
+    <link rel="stylesheet" href="todo.css">
+    <title>Document</title>
+</head>
+<body>
+    <div class="overall">
+        <div class="contain__input">
+            <input type="text" placeholder="Enter your task" id="task" class="tas">
+            <button id="addTask" class="add"><i class="fa fa-plus"></i></button>
+        </div>
+        <div id="task__contain" class="contain">
+            
+        </div>
+       
+    </div>
+    <script src="./todo.js"></script>
+</body>
+</html> 
+
+ <!-- const addTask = document.getElementById('addTask')
+ const addContainer = document.getElementById('task__contain')
+ const inputTask = document.getElementById('task')
+let arr = []
+const data = localStorage.getItem("local")
+arr = [...JSON.parse(data)]
+const addItem = (input) => {
+    
+    let task = document.createElement('div')
+    task.classList.add('task')
+    let li = document.createElement('li')
+    li.innerText = `${input}`
+    task.appendChild(li)
+    console.log("this is the input section",input)
+
+    let checkedButton = document.createElement('button')
+    checkedButton.innerHTML = '<i class="fa fa-check"></i>'
+    checkedButton.classList.add('checkedTask')
+    task.append(checkedButton)
+
+    let deleteButton = document.createElement('button')
+    deleteButton.innerHTML = '<i class="bi bi-trash-fill"></i>'
+    deleteButton.classList.add('delete')
+    task.append(deleteButton)
+    
+    let dateShow = document.createElement('p')
+    dateShow.innerText = Date()
+    dateShow.classList.add('date')
+    task.append(dateShow)
+    
+    if (inputTask === "") {
+        alert('Enter your Task')
+    }else {
+        addContainer.appendChild(task)
+    }
+   
+    deleteButton.addEventListener('click', function () {
+        task.remove()
+    })
+    checkedButton.addEventListener('click', function name(params) {
+        li.style.textDecoration = 'line-through'
+    })
+
+}
+
+if(arr.length > 0 ){
+    arr.forEach((i) => {
+       addItem(i)
+    })
+}
+
+
+
+ addTask.addEventListener('click', function () {
+    
+    arr.push(inputTask.value)
+    addItem(inputTask.value)
+    localStorage.setItem('local',JSON.stringify(arr))
+    inputTask.value = ""
+ 
+ }) 
+   let checkedTask = document.querySelector('.checkedTask')
+ checkedTask.addEventListener('click',  function strike(index) {
+    if (tasklist[index].includes("<strike>")) {
+        tasklist[index] = tasklist[index].replace("<strike>","");
+        tasklist[index] = tasklist[index].replace("</strike>","");
+    }else{
+        tasklist[index] = "<strike>"+ tasklist[index] +"</strike>"
+    }
+    showTask();
+ })  -->
